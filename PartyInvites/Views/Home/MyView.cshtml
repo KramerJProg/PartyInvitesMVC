@@ -8,16 +8,14 @@
     <head>
         <meta name="viewport" content="width=device-width" />
         <title>Index</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     </head>
 
     <body>
-        <div>
-            @ViewBag.Greeting Party People! (from the view)
-            <p>
-                We're going to have an exciting party! <br />
-                (To do: sell it better. Add pictures or something.)
-            </p>
-            <a asp-action="RsvpForm">RSVP Now!</a>
+        <div class="text-center">
+            <h3>WE'RE GOING TO HAVE AN EXCITING PARTY!</h3>
+            <h4>AND YOU'RE INVITED!!</h4>
+            <a class="btn btn-danger" asp-action="RsvpForm">RSVP Now</a>
         </div>
     </body>
 </html>
