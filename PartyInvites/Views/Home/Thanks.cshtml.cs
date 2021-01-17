@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace PartyInvites.Views.Home
 {
-    public class Index1Model : PageModel
+    public class ThanksModel : PageModel
     {
         public void OnGet()
         {

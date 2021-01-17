@@ -15,7 +15,7 @@ namespace PartyInvites.Controllers
         public ViewResult Index()
         {
             int hour = DateTime.Now.Hour;
-            ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
+            ViewBag.Greeting = hour < 12 ? "Good Morning" : "Greetings";
             return View("MyView");
         }
 
@@ -28,8 +28,8 @@ namespace PartyInvites.Controllers
         [HttpPost]
         public ViewResult RsvpForm(GuestResponse guestResponse)
         {
-            // TODO: store response from guest
-            return View();
+            Repository.AddResponse(guestResponse);
+            return View("Thanks", guestResponse);
         }
     }
 }
